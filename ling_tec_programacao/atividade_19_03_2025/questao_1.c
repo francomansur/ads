@@ -9,7 +9,7 @@ int main (void)
         char cidade[30];
         int idade;
 
-        printf("Digite seu nome: ");
+        printf("\nDigite seu nome: ");
         scanf("%s", nome);
 
         printf("\nDigite o nome da sua cidade: ");
@@ -20,14 +20,14 @@ int main (void)
 
         if (idade >= 18)
         {
-            printf("\n%s, nascido em %s, possui %d anos e é maior de idade.\n", nome, cidade, idade);
+            printf("\n%s, nascido em %s, possui %d anos e Ã© maior de idade.\n", nome, cidade, idade);
         }
         else if (idade < 18)
         {
-            printf("\n%s, nascido em %s, possui %d anos e é menor de idade.\n", nome, cidade, idade);
+            printf("\n%s, nascido em %s, possui %d anos e Ã© menor de idade.\n", nome, cidade, idade);
         }
         else
         {
-            printf("\nDados inválidos.\n");
+            printf("\nDados invï¿½lidos.\n");
         }
     }

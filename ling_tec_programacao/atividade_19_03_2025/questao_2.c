@@ -1,43 +1,44 @@
 #include <stdio.h>
-#include <locale.h>
 
 int main (void)
     {
-        setlocale(LC_ALL,"");
 
         char nome[50];
         int cargo;
-        float salario;
+        float salario, reajuste;
 
-        printf("Digite seu nome: ");
-        scanf("%s", &nome);
+        printf("\nDigite seu nome: ");
+        scanf("%s", nome);
 
-        printf("\nDigite o c�digo do seu cargo:\n101: Gerente\n102: Analista\n103: Engenheiro\n104: T�cnico\n>>  ");
+        printf("\nDigite o código do seu cargo:\n101: Gerente\n102: Analista\n103: Engenheiro\n104: Técnico\n>>  ");
         scanf("%d", &cargo);
 
-        printf("\nDigite seu sal�rio: ");
-        scanf("%f", &salario);
+        switch (cargo) {
+            case 101:
+                reajuste = 0.10;
+                break;
+            case 102:
+                reajuste = 0.20;
+                break;
+            case 103:
+                reajuste = 0.20;
+                break;
+            case 104:
+                reajuste = 0.30;
+                break;
+            default:
+                printf("Opção inválida\n");
+                return 1;  
+        } 
 
-        if (cargo==101)
-        {
-            salario = (salario+(salario*0.10));
-        }
-        else if (cargo==102)
-        {
-            salario = (salario+(salario*0.20));
-        }
-        else if (cargo==103)
-        {
-            salario = (salario+(salario*0.20));
-        }
-        else if (cargo==104)
-        {
-            salario = (salario+(salario*0.30));
-        }
-        else
-        {
-            printf("\nDados inv�lidos.");
-        }
+        printf("\nDigite seu salário: ");
+        scanf("%f", &salario); 
+        salario = salario + (salario * reajuste);      
 
-        printf("Novo sal�rio: %.2f\n", salario);
+        printf("\nNome: %s\n"
+            "Salário: %.2f\n"
+            "Novo Salário: %.2f\n"
+            "Aumento: %.2f\n",
+            nome, salario / (1 + reajuste), salario, salario - (salario / (1 + reajuste)));
+        printf("\n");
     }
