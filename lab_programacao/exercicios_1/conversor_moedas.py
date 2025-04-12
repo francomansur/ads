@@ -1,5 +1,5 @@
 """
-    Peça ao usuário para inserir as notas de um aluno e calcule a média, classificando-o como aprovado ou reprovado.
+    Crie um programa que converta valores de reais para dólares utilizando uma taxa fixa.
 """
 
 print('')
