@@ -9,7 +9,7 @@ int main (void)
 
     while (count < 10) {
 
-        printf("\nDigite o %d número: ", count + 1);
+        printf("\nDigite o %dº número: ", count + 1);
 
         if (scanf("%d", &valor) != 1) {
             printf("Entrada inválida. Digite apenas números!\n");
